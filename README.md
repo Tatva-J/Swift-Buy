@@ -1,100 +1,33 @@
-# SwiftBuy
+# Face Recognition System with OpenCV: Hackathon Project
 
-Bahvesh Shahu
-Dhruvil Patel
-Tatva Joshi
-Dhruvish Patel
-Tarkik Acharya
-Pranay Prajapati
-Pratik Raval
-Neel Kotadiya
-Caple Prajapati
+This repository contains the code and documentation for a face recognition system developed during a hackathon. The project aimed to create an efficient and accurate face recognition solution using the OpenCV library and machine learning techniques.
 
-## Getting started
+## Introduction
+The face recognition system leverages the power of computer vision and machine learning to identify and classify individuals based on their facial features. The project involved two main components: the registration process and the login functionality.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Registration Process
+During the registration process, the system captured and stored facial images of users in a PostgreSQL database. The OpenCV library, along with trained Haarcascade files, was utilized to detect and extract facial parts from the images. These parts were then stored in the database, ensuring secure and efficient storage of the encoded facial data.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+To enhance the performance of the face recognition model, image augmentation techniques were implemented. This involved applying various transformations to the captured images, creating a diverse set of inputs for better training and improved results. The model was continuously updated after each registration process, allowing it to adapt and improve its accuracy over time.
 
-## Add your files
+## Login Functionality
+The login functionality of the system involved real-time face recognition. When an API was triggered with live captured images of a user, the system utilized the trained model to classify and match the captured image with existing user images stored in the database. The classification process achieved an impressive accuracy rate of 92%.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+The accuracy of the face recognition model gradually improved as the system learned and updated itself with each registration process. The continuous adaptation of the model led to enhanced performance and better identification results over time.
 
-```
-cd existing_repo
-git remote add origin http://hgitlab.ah.zymrinc.com/zhackathon-2k22/swift-buy.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](http://hgitlab.ah.zymrinc.com/zhackathon-2k22/swift-buy/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Key Features
+- Face detection and extraction using Haarcascade files with OpenCV
+- PostgreSQL integration for secure storage of encoded facial data
+- Image augmentation techniques to improve the face recognition model's accuracy
+- Real-time face recognition using the trained model
+- Progressive learning and model updates after each registration process
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+1. Clone the repository: `git clone https://github.com/Tatva-J/Swift-Buy.git`
+2. Install the necessary dependencies: `pip install -r requirements.txt`
+3. Set up the PostgreSQL database and configure the connection details in the code.
+4. Run the registration script to capture and store user facial data.
+5. Utilize the login functionality to classify and match live captured images with the stored user data.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Conclusion
+This face recognition system, developed as a part of a hackathon project, demonstrates the utilization of OpenCV and machine learning techniques for accurate and efficient identification of individuals based on their facial features. The project showcases the ability to integrate image processing, database management, and real-time recognition, making it a valuable contribution to the field of computer vision and biometric authentication.
